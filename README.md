@@ -2,6 +2,13 @@
 
 A smart Python script that continuously monitors a folder on computer in real-time and instantly notifies you on Telegram whenever files are created, modified, or deleted. Optionally, it can trigger an Arduino to give physical alerts, like flashing LEDs or sounding buzzers, for real-time intrusion awareness.
 
+## Future Improvements
+
+In the future, this project could be extended to **application or process monitoring**.  
+Instead of just watching files and folders, **it could detect when specific applications (like WhatsApp, browsers, or any other program) are opened or closed.**
+
+This would allow real-time alerts not only for file changes but also for **software usage events**, making the system more versatile and powerful for personal security or monitoring purposes.
+
 ---
 ## Why I Built This
 
@@ -24,28 +31,6 @@ By exploring or building this project, you can learn:
 4. **Debouncing logic** – Handle rapid file events without spamming notifications.
 5. **Background automation** – Run scripts silently in the background on Windows without CMD windows.
 6. **Error handling** – Keep your program running smoothly even if optional parts (like Arduino) aren't connected.
-
----
-
-## What You Need
-
-### Software
-- Python 3.x
-- Three Python libraries:
-  ```bash
-  pip install pyserial pyTelegramBotAPI watchdog
-  ```
-
-### For Telegram Alerts
-- A Telegram account
-- A bot token from [@BotFather](https://t.me/BotFather)
-- Your user ID from [@userinfobot](https://t.me/userinfobot)
-
-### For Arduino (Optional)
-- Any Arduino board (Uno, Nano, Mega — doesn't matter)
-- USB cable
-- An LED or buzzer to show alerts
-- Some basic wiring knowledge
 
 ---
 
