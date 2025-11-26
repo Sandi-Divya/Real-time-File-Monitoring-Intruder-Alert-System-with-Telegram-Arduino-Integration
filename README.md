@@ -102,7 +102,7 @@ If you don't have an Arduino or don't want to use it, the script handles this au
 
 ## Running It
 
-### First Time - Testing Mode
+### 1) First Time - Testing Mode
 
 First, I tested the script the normal way using CMD (Command Prompt) to make sure everything worked:
 
@@ -115,7 +115,7 @@ This lets you see all the messages in the terminal as files are created, modifie
 <img width="1148" height="152" alt="bot3" src="https://github.com/user-attachments/assets/a82b3e21-b613-452f-9e94-59f1b2277af4" />
 
 
-### Running Silently in Background
+### 2) Running Silently in Background
 
 After confirming it works, I wanted the script to run silently in the background without keeping a terminal window open. To do that:
 
@@ -145,6 +145,30 @@ Now, whenever I click the shortcut, the script starts running in the background 
 <img width="422" height="206" alt="bot" src="https://github.com/user-attachments/assets/418476be-4b41-4276-8238-7edca4f574f1" />
 
 This way, I can leave the script running all the time without it interfering with anything else I'm doing.
+
+### 3) Set the Script to **Autorun on Startup** (Task Scheduler)
+
+1. Open **Task Scheduler**  
+- Press `Win + S` → type `Task Scheduler` → Enter
+2. Click **Create Task**
+3. **General Tab**  
+- Name: `SecureFileAlert`  
+- Check: **Run whether user is logged on or not**  
+- Optional: **Run with highest privileges**
+4. **Triggers Tab**  
+- Click **New…** → Begin the task: **At log on** → OK
+5. **Actions Tab**  
+- Click **New…** → Action: **Start a program**  
+- Program/script: `pythonw.exe` path  
+- Add arguments: `"C:\path\to\secure_file_alert.py"` → OK
+6. **Conditions Tab**  
+- Uncheck: **Start the task only if the computer is on AC power**
+7. **Settings Tab**  
+- Check: **Allow task to be run on demand**  
+- Optional: Restart on failure
+8. Click **OK** and enter your Windows password if prompted
+
+The script will now run automatically in the background every time you start your computer.
 
 ### Stopping It
 
