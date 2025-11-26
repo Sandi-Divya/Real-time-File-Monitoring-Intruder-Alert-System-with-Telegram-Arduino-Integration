@@ -116,7 +116,6 @@ If you don't have an Arduino or don't want to use it, the script handles this au
 ---
 
 ## Running It
-<img width="422" height="206" alt="bot" src="https://github.com/user-attachments/assets/418476be-4b41-4276-8238-7edca4f574f1" />
 
 ### First Time - Testing Mode
 
@@ -157,6 +156,8 @@ To make it easier, I created a shortcut on my desktop:
 4. Click Finish
 
 Now, whenever I click the shortcut, the script starts running in the background automatically — monitoring my folder, sending Telegram alerts, and triggering Arduino (if connected) — without showing any terminal window.
+
+<img width="422" height="206" alt="bot" src="https://github.com/user-attachments/assets/418476be-4b41-4276-8238-7edca4f574f1" />
 
 This way, I can leave the script running all the time without it interfering with anything else I'm doing.
 
